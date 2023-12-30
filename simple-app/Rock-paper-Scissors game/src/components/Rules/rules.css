@@ -1,0 +1,23 @@
+.rules-btn{
+    background-color: var(--background-image) !important;
+    border: 2px solid var(--text-color) !important;
+    padding: 0.5rem 3rem !important ;
+}
+
+
+@media (max-width:600px) {
+    .rules{
+        justify-content: center !important;
+        margin-top: 6rem !important;
+    }
+} 
+@media (max-width:1024px) and (min-width:600px) {
+    .rules{
+        justify-content: center !important;
+        margin-top: 6rem !important;
+        margin-bottom: 6rem !important;
+    }
+    body{
+        height: 120vh;
+    }
+} 
