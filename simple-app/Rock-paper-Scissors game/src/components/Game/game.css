@@ -1,0 +1,456 @@
+/* Start Animation */
+
+@keyframes Rotation {
+    0%{
+        margin-top: 8rem;
+        transform: rotate(-180deg);
+    }
+    20%{
+        margin-top: 6rem;
+    }
+    40%{
+        margin-top: 4rem;
+        transform: rotate(-90deg);
+    }
+    60%{
+        margin-top: 2rem;
+    }
+    100%{
+        margin-top: 0rem;
+        transform: rotate(0deg);
+    }
+}
+/* End Animation */
+
+
+
+/* Start Styling */
+
+.body-game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    position: relative;
+    margin-top: 3rem;
+}
+
+.triangle-game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: -1;
+}
+
+.game-content{
+    position: absolute;
+}
+
+.paper{
+    background-color: var(--text-color);
+    width: 10rem !important;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4rem;
+    border-radius: 50%;
+    border:20px solid hsl(230, 89%, 65%);
+    cursor: pointer;
+}
+
+.scissors{
+    background-color: var(--text-color);
+    width: 10rem !important;
+    height: 10rem;
+    border-radius: 50%;
+    border: 20px solid hsl(39, 89%, 49%);
+    cursor: pointer;
+}
+
+.rock{
+    background-color: var(--text-color);
+    width: 10rem !important;
+    height: 10rem;
+    border-radius: 50%;
+    border:20px solid hsl(349, 70%, 56%);
+    cursor: pointer;
+}
+
+.paper2{
+    background-color: var(--text-color);
+    width: 10rem !important;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4rem;
+    border-radius: 50%;
+    border:20px solid hsl(230, 89%, 65%);
+    cursor: pointer;
+}
+
+.scissors2{
+    background-color: var(--text-color);
+    width: 10rem !important;
+    height: 10rem;
+    border-radius: 50%;
+    border: 20px solid hsl(39, 89%, 49%);
+    cursor: pointer;
+}
+
+.rock2{
+    background-color: var(--text-color);
+    width: 10rem !important;
+    height: 10rem;
+    border-radius: 50%;
+    border:20px solid hsl(349, 70%, 56%);
+    cursor: pointer;
+}
+
+.paper-game{
+    background-color: var(--text-color);
+    width: 12rem !important;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 14rem;
+    margin-top: 2rem !important;
+    border-radius: 50%;
+    border:20px solid hsl(230, 89%, 65%);
+    cursor: pointer;
+}
+
+.scissors-game{
+    background-color: var(--text-color);
+    width: 12rem !important;
+    height: 12rem;
+    margin-top: 2rem !important;
+    border-radius: 50%;
+    border: 20px solid hsl(39, 89%, 49%);
+    cursor: pointer;
+}
+
+.players{
+    display: none;
+    justify-content: space-evenly;
+    color: var(--text-color);
+}
+
+.game-start{
+    color: var(--text-color);
+    display: none;
+    justify-content: space-evenly;
+    margin: 2rem;
+}
+
+.player1-gamestart{
+    border: 20px solid hsl(39, 89%, 49%);
+    border-radius: 50%;
+    width: 12rem !important;
+    height: 12rem !important;
+    background-color: var(--text-color);
+    animation-name: Rotation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    transition: .2s all linear;
+    box-shadow: 4px 4px 4px 4px #989898 inset;
+}
+
+.player2-gamestart{
+    border: 20px solid hsl(230, 89%, 65%);
+    border-radius: 50%;
+    width: 12rem !important;
+    height: 12rem !important;
+    background-color: var(--text-color);
+    animation-name: Rotation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    transition: .2s all linear;
+    box-shadow: 4px 4px 4px 4px #989898 inset;
+}
+
+.Result{
+    display: none;
+    justify-content: center;
+    color: var(--text-color);
+}
+
+.playAgain-btn{
+    color: hsl(230, 56%, 28%);
+    background-color: var(--text-color);
+    padding: 1rem 4rem;
+    border-radius: 0.5rem;
+    border: none;
+
+}
+
+.playAgain{
+    display: none;
+    justify-content: center;
+}
+
+/* End Styling */
+
+
+/* Start media */
+
+@media (max-width:550px) and (min-width: 450px) {
+    body{
+        height: 120vh;
+    }
+}
+@media (max-width:450px) and (min-width: 226px) {
+    .paper{
+        width: 8rem !important;
+        height: 8rem;
+        margin-top: -2rem !important;
+    }
+    .scissors{
+        width: 8rem !important;
+        height: 8rem;
+        margin-top: -2rem !important;
+
+    }
+    .rock{
+        width: 8rem !important;
+        height: 8rem;
+        margin-top: 5rem !important;
+    }
+    .paper2{
+        width: 8rem !important;
+        height: 8rem;
+        margin-top: -2rem !important;
+    }
+    .scissors2{
+        width: 8rem !important;
+        height: 8rem;
+        margin-top: -2rem !important;
+
+    }
+    .rock2{
+        width: 8rem !important;
+        height: 8rem;
+        margin-top: 5rem !important;
+    }
+    .player1-gamestart{
+        border: 15px solid hsl(39, 89%, 49%);
+        width: 6rem !important;
+        height: 6rem !important;
+    }
+    .player2-gamestart{
+        border: 15px solid hsl(230, 89%, 65%);
+        width: 6rem !important;
+        height: 6rem !important;
+    }
+    .paper-img{
+        width: 2rem !important;
+        height: 2rem !important;
+        margin-top: 0.25rem !important;
+        margin-left: 0.25rem !important;
+    }
+    
+    .paper2-img{
+        width: 2rem !important;
+        height: 2rem !important;
+        margin-top: 0.25rem !important;
+        margin-left: 0.25rem !important;
+    }
+    .rock-img{
+        width: 2rem !important;
+        height: 2rem !important;
+        margin-top: 1.75rem !important;
+        margin-left: 1.25rem !important;
+    }
+    .rock2-img{
+        width: 2rem !important;
+        height: 2rem !important;
+        margin-top: 1.75rem !important;
+        margin-left: 1.25rem !important;
+    }
+    .scissors-img{
+        width: 2rem !important;
+        height: 2rem !important;
+        margin-top: 1.75rem !important;
+        margin-left: 1rem !important;
+    }
+    .scissors2-img{
+        width: 2rem !important;
+        height: 2rem !important;
+        margin-top: 1.75rem !important;
+        margin-left: 1rem !important;
+    }
+    .paper-img-gamestart{
+        width: 2rem !important;
+        height: 2rem !important;
+        margin-top: 1.25rem !important;
+        margin-left: 1.25rem !important;
+    }
+    
+    .paper2-img-gamestart{
+        width: 2rem !important;
+        height: 2rem !important;
+        margin-top: 1.25rem !important;
+        margin-left: 1.25rem !important;
+    }
+    .rock-img-gamestart{
+        width: 2rem !important;
+        height: 2rem !important;
+        margin-top: 1.25rem !important;
+        margin-left: 1.25rem !important;
+    }
+    .rock2-img-gamestart{
+        width: 2rem !important;
+        height: 2rem !important;
+        margin-top: 1.25rem !important;
+        margin-left: 1.25rem !important;
+    }
+    .scissors-img-gamestart{
+        width: 2rem !important;
+        height: 2rem !important;
+        margin-top: 1.25rem !important;
+        margin-left: 1.25rem !important;
+    }
+    .scissors2-img-gamestart{
+        width: 2rem !important;
+        height: 2rem !important;
+        margin-top: 1.25rem !important;
+        margin-left: 1.25rem !important;
+    }
+    body{
+        height: 115vh;
+    }
+} 
+
+
+@media (max-width:350px) and (min-width: 226px) {
+    .paper{
+        width: 6rem !important;
+        height: 6rem;
+        margin-top: -2rem !important;
+        border: 15px solid hsl(230, 89%, 65%);
+    }
+    .scissors{
+        width: 6rem !important;
+        height: 6rem;
+        margin-top: -2rem !important;
+        border: 15px solid hsl(39, 89%, 49%);
+
+    }
+    .rock{
+        width: 6rem !important;
+        height: 6rem;
+        margin-top: 5rem !important;
+        border: 15px solid hsl(349, 70%, 56%);
+    }
+    .rock2{
+        width: 6rem !important;
+        height: 6rem;
+        margin-top: 5rem !important;
+        border: 15px solid hsl(349, 70%, 56%);
+    }
+    .paper2{
+        width: 6rem !important;
+        height: 6rem;
+        margin-top: -2rem !important;
+        border: 15px solid hsl(230, 89%, 65%);
+    }
+    .scissors2{
+        width: 6rem !important;
+        height: 6rem;
+        margin-top: -2rem !important;
+        border: 15px solid hsl(39, 89%, 49%);
+
+    }
+    .paper-img{
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+        margin-top: 0.25rem !important;
+        margin-left: 0.25rem !important;
+    }
+    
+    .paper2-img{
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+        margin-top: 0.25rem !important;
+        margin-left: 0.25rem !important;
+    }
+    .rock-img{
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+        margin-top: 1.5rem !important;
+        margin-left: 1rem !important;
+    }
+    .rock2-img{
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+        margin-top: 1.5rem !important;
+        margin-left: 1rem !important;
+    }
+    .scissors-img{
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+        margin-top: 1.25rem !important;
+        margin-left: 0.75rem !important;
+    }
+    .scissors2-img{
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+        margin-top: 1.25rem !important;
+        margin-left: 0.75rem !important;
+    }
+    .triangle-game img{
+        width: 15rem !important;
+    }
+    .player1-gamestart{
+        border: 12px solid hsl(39, 89%, 49%);
+        width: 5rem !important;
+        height: 5rem !important;
+    }
+    .player2-gamestart{
+        border: 12px solid hsl(230, 89%, 65%);
+        width: 5rem !important;
+        height: 5rem !important;
+    }
+    .paper-img-gamestart{
+        width: 1.75rem !important;
+        height: 1.75rem !important;
+        margin-top: 1rem !important;
+        margin-left: 1rem !important;
+    }
+    
+    .paper2-img-gamestart{
+        width: 1.75rem !important;
+        height: 1.75rem !important;
+        margin-top: 1rem !important;
+        margin-left: 1rem !important;
+    }
+    .rock-img-gamestart{
+        width: 1.75rem !important;
+        height: 1.75rem !important;
+        margin-top: 1rem !important;
+        margin-left: 1rem !important;
+    }
+    .rock2-img-gamestart{
+        width: 1.75rem !important;
+        height: 1.75rem !important;
+        margin-top: 1rem !important;
+        margin-left: 1rem !important;
+    }
+    .scissors-img-gamestart{
+        width: 1.75rem !important;
+        height: 1.75rem !important;
+        margin-top: 1rem !important;
+        margin-left: 1rem !important;
+    }
+    .scissors2-img-gamestart{
+        width: 1.75rem !important;
+        height: 1.75rem !important;
+        margin-top: 1rem !important;
+        margin-left: 1rem !important;
+    }
+}
+
+/* End media */
