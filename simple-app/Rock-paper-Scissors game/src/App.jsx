@@ -1,33 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import React, { useState } from 'react'
+import Container from 'react-bootstrap/Container';
+import Header from './components/Header/Header.jsx'
+import Game from './components/Game/Game.jsx'
+import Rules from './components/Rules/Rules.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [player1count, setPlayer1Count] = useState(0);
+  const [player2count, setPlayer2Count] = useState(0);
+
+  const updateScore = (result) => {
+    if (result === 'Player 1 Wins') {
+      setPlayer1Count(prevCount => prevCount + 1);
+    } else if (result === 'Player 2 Wins') {
+      setPlayer2Count(prevCount => prevCount + 1);
+    }
+    // Handle draw scenario if needed
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <Container>
+      <Header player1count={player1count} player2count={player2count}/>
+      <Game updateScore={updateScore}/>
+      <Rules />
+    </Container>
     </>
   )
 }
