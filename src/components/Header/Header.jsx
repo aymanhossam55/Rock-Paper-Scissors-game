@@ -1,27 +1,34 @@
-import React, { useState } from 'react'
-import "./header.css"
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Logo from '../../assets/logo.svg'
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
+import Logo from "../../assets/logo.svg";
+
+import "./header.css";
 
 const Header = ({ player1count, player2count }) => {
+    return (
+        <Container className="header">
+            <Row className="header-content align-items-center">
+                <Col className="logo">
+                    <img
+                        src={Logo}
+                        alt="Rock Paper Scissors"
+                    />
+                </Col>
 
-  return (
-    <>
-        <Container className='header'>
-          <Row className='header-content'>
-            <Col className='logo'>
-              <img src={Logo} alt="" />
-            </Col>
-            <Col sm={2} className='score'>
-                <Row className='score-heading'>Score</Row>
-                <Row className='score-count'>{player1count}-{player2count}</Row>
-            </Col>
-          </Row>
+                <Col xs="auto" className="score">
+                    <span className="score-heading">
+                        SCORE
+                    </span>
+
+                    <span className="score-count">
+                        {player1count} - {player2count}
+                    </span>
+                </Col>
+            </Row>
         </Container>
-    </>
-  )
-}
+    );
+};
 
-export default Header
+export default Header;

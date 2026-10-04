@@ -1,61 +1,63 @@
-.header{
-    color:  var(--text-color);
-    outline: var(--outline-header);
-    margin: var(--margin-section);
-    padding: var(--padding-section);
-    width: 50% !important;
-}
-.header-content{
-    margin-left: var(--margin-section);
-    font-size: var(--text-size);
-    font-weight: 700;
-    display: flex;
-    justify-content: space-between;
+.header {
+    width: min(100%, 700px) !important;
+
+    margin: 2rem auto 1rem;
+    padding: 1rem;
+
+    border: 3px solid var(--outline-color);
+    border-radius: 12px;
+
+    color: var(--text-color);
 }
 
-.score{
-    background-color: var(--text-color);
-    margin-right: 1rem;
+.header-content {
+    width: 100%;
+}
+
+.logo img {
+    width: clamp(120px, 25vw, 180px);
+    display: block;
+}
+
+.score {
+    min-width: 95px;
+    padding: 0.55rem 1rem;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 0.5rem;
+
+    background: var(--text-color);
+    border-radius: 8px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-.score-heading{
+.score-heading {
     color: hsl(229, 64%, 46%);
-    font-size: small;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
 
-.score-count{
-    font-size: 2.5rem;
+.score-count {
     color: hsl(229, 25%, 31%);
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    line-height: 1;
+    font-weight: 700;
+    margin-top: 0.2rem;
 }
 
-/* Small */
-@media (max-width: 768px) and (min-width:226px) {
+@media (max-width: 500px) {
     .header {
-        width: 100% !important;
+        margin-top: 1rem;
+        padding: 0.75rem;
+        width: calc(100% - 1.5rem) !important;
     }
-    .header-content{
-        margin: 0rem 0.5rem !important;
-    }
-    .logo{
-        margin-bottom: 0.5rem;
-    }
-}
 
-/* Medium */
-@media (max-width: 992px) and (min-width:768px) {
-    .header {
-        width: 75% !important;
-    }
-}
-
-/* large */
-@media (max-width: 1168px) and (min-width:992px) {
-    .header {
-        width: 50% !important;
+    .score {
+        min-width: 80px;
+        padding: 0.45rem 0.7rem;
     }
 }

@@ -1,30 +1,37 @@
-import React from 'react'
-import './rules.css'
-import { Button } from 'react-bootstrap'
-import rules from '../../assets/image-rules.svg'
-// import { useState } from 'react'
-import Swal from 'sweetalert2'
+import { Button } from "react-bootstrap";
+import Swal from "sweetalert2";
 
+import rules from "../../assets/image-rules.svg";
+
+import "./rules.css";
 
 const Rules = () => {
-    const Rule = () => {
-      Swal.fire({
-      title:"Rules",
-      showCloseButton: true,
-      imageUrl: rules,
-      heightAuto : false,
-      imageAlt: "Rules"
-  })};
-  return (
-    <div
-    className='rules'
-    style={{display:"flex",justifyContent:"flex-end",alignContent:"flex-end",marginTop:"2rem",marginBottom:"6rem"}}
-    >
-      <Button className='rules-btn' onClick={Rule}>
-        Rules
-      </Button>
-    </div>
-  )
-}
+    const showRules = () => {
+        Swal.fire({
+            title: "Rules",
+            imageUrl: rules,
+            imageAlt: "Rock Paper Scissors rules",
+            showCloseButton: true,
+            showConfirmButton: false,
+            background: "#ffffff",
+            heightAuto: false,
+            customClass: {
+                popup: "rules-popup",
+            },
+        });
+    };
 
-export default Rules
+    return (
+        <div className="rules">
+            <Button
+                type="button"
+                className="rules-btn"
+                onClick={showRules}
+            >
+                Rules
+            </Button>
+        </div>
+    );
+};
+
+export default Rules;

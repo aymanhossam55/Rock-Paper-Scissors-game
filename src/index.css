@@ -1,14 +1,45 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  --text-color: rgba(255, 255, 255, 0.87);
-  --text-size : 1.5rem;
-  --background-image: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
-  --outline-header: 3px solid hsl(217, 16%, 45%);
-  --margin-section: 2rem;
-  --padding-section : 1rem;
-  --Scissors-Gradient: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-  --Paper-Gradient: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-  --Rock-Gradient: radial-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+
+    --text-color: rgba(255, 255, 255, 0.95);
+
+    --background-image:
+        radial-gradient(
+            circle at top,
+            hsl(214, 47%, 23%),
+            hsl(237, 49%, 15%)
+        );
+
+    --outline-color: hsl(217, 16%, 45%);
+
+    --Scissors-Gradient:
+        radial-gradient(
+            hsl(39, 89%, 49%),
+            hsl(40, 84%, 53%)
+        );
+
+    --Paper-Gradient:
+        radial-gradient(
+            hsl(230, 89%, 62%),
+            hsl(230, 89%, 65%)
+        );
+
+    --Rock-Gradient:
+        radial-gradient(
+            hsl(349, 71%, 52%),
+            hsl(349, 70%, 56%)
+        );
 }
 
+body {
+    margin: 0;
+}

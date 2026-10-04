@@ -1,17 +1,36 @@
-body{
-    background-image: var(--background-image);
-    background-repeat: no-repeat;
-    height: 100vh;
-}
-
-*{
+* {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+html,
+body,
+#root {
+    min-height: 100%;
+}
 
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
 
+button,
+input {
+    font: inherit;
+}
 
+button {
+    -webkit-tap-highlight-color: transparent;
+}
 
+.app {
+    min-height: 100vh;
 
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 
+    padding-bottom: 1rem;
+}
